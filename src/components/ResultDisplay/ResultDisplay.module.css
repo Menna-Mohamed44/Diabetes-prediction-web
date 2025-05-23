@@ -1,0 +1,125 @@
+.resultContainer {
+  background-color: var(--background-light);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resultTitle {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.resultCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.diabetic .resultCard {
+  background-color: rgba(207, 102, 121, 0.1);
+  border: 1px solid var(--error);
+}
+
+.nonDiabetic .resultCard {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid var(--success);
+}
+
+.resultIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.diabetic .resultIcon {
+  color: var(--error);
+}
+
+.nonDiabetic .resultIcon {
+  color: var(--success);
+}
+
+.resultText {
+  flex: 1;
+}
+
+.resultText h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.diabetic .resultText h3 {
+  color: var(--error);
+}
+
+.nonDiabetic .resultText h3 {
+  color: var(--success);
+}
+
+.resultText p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.probability {
+  margin-top: 1rem;
+}
+
+.probability span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.progressBar {
+  height: 8px;
+  background-color: var(--background-dark);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.diabetic .progress {
+  background-color: var(--error);
+}
+
+.nonDiabetic .progress {
+  background-color: var(--success);
+}
+
+.disclaimer {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+}
+
+.disclaimer p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .resultCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .resultContainer {
+    padding: 1.5rem;
+  }
+}
